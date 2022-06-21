@@ -132,9 +132,27 @@ const readMoreBtn = document.querySelector('.read-more');
 
 readMoreBtn.addEventListener('click', () => {
     hiddenText.classList.toggle('show-hidden-text');
-    if(hiddenText.className === 'hidden-text') {
-      readMoreBtn.textContent = 'Read More';
-    } else {
-      readMoreBtn.textContent = 'Read Less';
-    }
+    hiddenText.className === 'hidden-text' ? readMoreBtn.textContent = 'Read More' : readMoreBtn.textContent = 'Read Less';
+});
+
+// Filter sticky
+const filterOptions = document.querySelector('.filter-block-options');
+
+window.onscroll = () => { filterFunction() };
+
+function filterFunction() {
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    filterOptions.classList.add('filter-scroll');
+  } else {
+    filterOptions.classList.remove('filter-scroll');
+  }
+}
+
+const radios = document.querySelectorAll('input[type="radio"]');
+const clearAll = document.querySelector('.clear-all');
+
+radios.forEach(radio => {
+  radio.addEventListener('click', () => {
+      radio.checked ? clearAll.classList.add('show-clear') : clearAll.classList.remove('show-clear');
+  });
 });
