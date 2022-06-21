@@ -148,11 +148,18 @@ function filterFunction() {
   }
 }
 
-const radios = document.querySelectorAll('input[type="radio"]');
+const checkBox = document.querySelectorAll('input[type="checkbox"]');
 const clearAll = document.querySelector('.clear-all');
 
-radios.forEach(radio => {
-  radio.addEventListener('click', () => {
-      radio.checked ? clearAll.classList.add('show-clear') : clearAll.classList.remove('show-clear');
+checkBox.forEach(check => {
+  check.addEventListener('click', () => {
+      check.checked ? clearAll.classList.add('show-clear') : clearAll.classList.remove('show-clear');
+  });
+});
+
+clearAll.addEventListener('click', function() {
+  checkBox.forEach(check => {
+     check.checked === true ? check.checked = false : check.checked = false;
+     clearAll.classList.remove('show-clear');
   });
 });

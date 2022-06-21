@@ -96,9 +96,10 @@ h3 {
     position: relative;
 }
 .hidden-filter-heading,
-input[type="radio"],
+input[type="checkbox"],
 #back-to-top,
-.read-more {
+.read-more,
+.clear-all {
     cursor: pointer;
 }
 .fa-chevron-down,
