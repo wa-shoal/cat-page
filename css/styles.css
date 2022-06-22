@@ -106,7 +106,7 @@ input[type="checkbox"]::before {
     position: absolute;
     content: '';
     top: 0;
-    left: -3px;
+    left: 0;
     height: 16px;
     width: 16px;
     border-radius: 50px;
@@ -116,7 +116,7 @@ input[type="checkbox"]:after {
     position: absolute;
     content: '';
     top: 3px;
-    left: 0;
+    left: 3px;
     height: 12px;
     width: 12px;
     border-radius: 50px;
@@ -174,7 +174,7 @@ input[type="checkbox"],
 .cat-title {
     width: 75%;
     font-size: 14px;
-    margin-left: 24px;
+    margin-left: 26px;
     line-height: 16px;
 	font-size: 14px;
     font-weight: 500;
