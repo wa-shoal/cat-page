@@ -105,7 +105,7 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
     position: absolute;
     content: '';
-    top: -3px;
+    top: 0;
     left: -3px;
     height: 16px;
     width: 16px;
@@ -115,7 +115,7 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:after {
     position: absolute;
     content: '';
-    top: 0;
+    top: 3px;
     left: 0;
     height: 12px;
     width: 12px;
