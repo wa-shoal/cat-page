@@ -313,6 +313,10 @@ input[type="checkbox"],
     background-color: #fff;
     font-weight: 500;
 }
+.faq-question {
+    width: 90%;
+    font-size: 14px;
+}
 .fa-plus {
     position: absolute;
     right: 14px;
