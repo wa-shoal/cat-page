@@ -67,15 +67,17 @@ productData.reverse();
 productData.forEach(product => {
   const productBlock = `
     <div class="product-block">
-      <div class="product-block-content">
+      <div class="product-block-content-container">
         <div class="product-image">
           <img src="${product.img}" alt="${product.title}">
         </div>
-          <span class="sku">${product.sku}</span>
-          <h4>${product.title}</h4>
-          <span class="ex-vat">Excl VAT</span>
-          <span class="price">£${product.price}</span>
-          <button class="basket-btn">ADD TO BASKET</button>
+          <div class="product-block-content">
+            <span class="sku">${product.sku}</span>
+            <h4>${product.title}</h4>
+            <span class="ex-vat">Excl VAT</span>
+            <span class="price">£${product.price}</span>
+            <button class="basket-btn">ADD TO BASKET</button>
+          </div>
         </div>
       </div>
     </div>
